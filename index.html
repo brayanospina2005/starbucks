@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <title>Starbucks</title>
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="">
+                <img class="logo" src="/src/img/logo.png" alt="logo">
+            </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's new</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's no a Coffee <br> It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore cum harum sint voluptatibus,
+                    consectetur asperiores velit delectus impedit tempora possimus accusamus aperiam distinctio quis
+                    provident commodi consequatur! Delectus, ut praesentium.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="./src/img/img1.png" class="starbucks" alt="">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./src/img/thumb1.png" onclick="imgSlider('./src/img/img1.png');changeCircleColor('#017143')" alt="img"></li>
+            <li><img src="./src/img/thumb2.png" onclick="imgSlider('./src/img/img2.png');changeCircleColor('#eb7495')" alt="img"></li>
+            <li><img src="./src/img/thumb3.png" onclick="imgSlider('./src/img/img3.png');changeCircleColor('#d752b1')" alt="img"></li>
+            <li><img src="./src/img/naufal-giffari-0kThiUv4Y4s-unsplash-removebg.png" onclick="imgSlider('./src/img/naufal-giffari-0kThiUv4Y4s-unsplash-removebg.png');changeCircleColor('#51372d')" alt="img"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="./src/img/facebook.png" alt="socials-media"></a></li>
+            <li><a href="#"><img src="./src/img/twitter.png" alt="socials-media"></a></li>
+            <li><a href="#"><img src="./src/img/instagram.png" alt="socials-media"></a></li>
+        </ul>
+    </section>
+    <script src="./src/js/app.js"></script>
+</body>
+
+</html>
