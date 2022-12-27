@@ -5,25 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="shortcut icon" href="src/img/logo.png" type="image/x-icon">
     <title>Starbucks</title>
 </head>
 
 <body>
     <section>
-        <div class="circle"></div>
+        <div class="circle text-focus-in"></div>
         <header>
-            <a href="">
-                <img class="logo" src="/src/img/logo.png" alt="logo">
+            <a href="https://www.starbucks.com.co">
+                <img class="logo text-focus-in" src="./src/img/logo.png" alt="logo">
             </a>
-            <ul>
+            <div class="toggle text-focus-in" onclick="toggleMenu();"></div>
+            <ul class="navigation text-focus-in">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">What's new</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </header>
-        <div class="content">
+        <div class="content text-focus-in">
             <div class="textBox">
                 <h2>It's no a Coffee <br> It's <span>Starbucks</span></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore cum harum sint voluptatibus,
@@ -31,22 +34,78 @@
                     provident commodi consequatur! Delectus, ut praesentium.</p>
                 <a href="#">Learn More</a>
             </div>
-            <div class="imgBox">
+            <div class="imgBox text-focus-in">
                 <img src="./src/img/img1.png" class="starbucks" alt="">
             </div>
         </div>
-        <ul class="thumb">
-            <li><img src="./src/img/thumb1.png" onclick="imgSlider('./src/img/img1.png');changeCircleColor('#017143')" alt="img"></li>
-            <li><img src="./src/img/thumb2.png" onclick="imgSlider('./src/img/img2.png');changeCircleColor('#eb7495')" alt="img"></li>
-            <li><img src="./src/img/thumb3.png" onclick="imgSlider('./src/img/img3.png');changeCircleColor('#d752b1')" alt="img"></li>
-            <li><img src="./src/img/naufal-giffari-0kThiUv4Y4s-unsplash-removebg.png" onclick="imgSlider('./src/img/naufal-giffari-0kThiUv4Y4s-unsplash-removebg.png');changeCircleColor('#51372d')" alt="img"></li>
+        <ul class="thumb text-focus-in">
+            <li><img src="./src/img/thumb1.png" onclick="imgSlider('./src/img/img1.png');changeCircleColor('#017143')"
+                    alt="img"></li>
+            <li><img src="./src/img/thumb2.png" onclick="imgSlider('./src/img/img2.png');changeCircleColor('#eb7495')"
+                    alt="img"></li>
+            <li><img src="./src/img/thumb3.png" onclick="imgSlider('./src/img/img3.png');changeCircleColor('#d752b1')"
+                    alt="img"></li>
+            <li><img src="./src/img/naufal-giffari-0kThiUv4Y4s-unsplash-removebg.png"
+                    onclick="imgSlider('./src/img/naufal-giffari-0kThiUv4Y4s-unsplash-removebg.png');changeCircleColor('#51372d')"
+                    alt="img"></li>
         </ul>
-        <ul class="sci">
+        <ul class="sci text-focus-in">
             <li><a href="#"><img src="./src/img/facebook.png" alt="socials-media"></a></li>
             <li><a href="#"><img src="./src/img/twitter.png" alt="socials-media"></a></li>
             <li><a href="#"><img src="./src/img/instagram.png" alt="socials-media"></a></li>
         </ul>
     </section>
+    <footer class="hero text-focus-in">
+        <div class="container flex">
+            <div class="container__about text-focus-in">
+                <h2>About</h2>
+                <p>A young software developer, starting his professional life, learning the most used languages in this
+                    industry, PYTHON, C++, HTML, CSS and JAVASCRIPT.</p>
+            </div>
+            <div class="container-pages flex">
+
+                <div class="container__recentpages">
+                    <h2>Recient Pages</h2>
+                    <ul>
+                        <li><a href="https://brayancountries.netlify.app">Countries</a></li>
+                        <li><a href="https://portfolio-brayan.netlify.app/">Portfolio</a></li>
+                        <li><a href="https://cartagena-cooks.netlify.app/">Cartagena-cooks</a></li>
+                        <li><a href="https://work-company.netlify.app/">Work-company</a></li>
+                    </ul>
+                </div>
+                <div class="container__more">
+                    <h2>Recient Pages</h2>
+                    <ul>
+                        <li><a href="https://challenge2-bom.netlify.app/">Challenge2</a></li>
+                        <li><a href="https://challenge3-brayanom.netlify.app/">Challenge3</a></li>
+                        <li><a href="https://dev4-brayanom.netlify.app/">Challenge4</a></li>
+                        <li><a href="https://cv-brayanom.netlify.app/">Curriculum</a></li>
+                        <li><a href="https://mentor1-brayanom.netlify.app/">Mentor1</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="line__separete"></div>
+        <div class="by flex">
+            <p>Copyright © 2022 All Rights Reserved by Brayan Ospina.</p>
+            <div class="icons">
+                <a href="https://t.co/VBNNTjtw3F" class="icon1 icon--instagram">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="#" class="icon1 icon--twitter">
+                    <i class="ri-twitter-line"></i>
+                </a>
+                <a href="linkedin.com/in/brayan-ospina-8bb472243" class="icon1 icon--linkedin">
+                    <i class="ri-linkedin-line"></i>
+                </a>
+                <a href="https://github.com/brayanospina2005/final-project" class="icon1 icon--github">
+                    <i class="ri-github-line"></i>
+                </a>
+            </div>
+        </div>
+
+    </footer>
     <script src="./src/js/app.js"></script>
 </body>
 

@@ -41,6 +41,7 @@ header ul {
 
 header ul li {
   list-style: none;
+ 
 }
 
 header ul li a {
@@ -49,6 +50,24 @@ header ul li a {
   font-weight: 400;
   margin-left: 40px;
   text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+header ul li a::after {
+ bottom: 0;
+ content: '';
+ display: block;
+ height: 2px;
+ left: 50%;
+ position: absolute;
+ background-color: #017143;
+ transition: width 0.3s ease 0s, left 0.3s ease 0s;
+ width: 0;
+}
+header ul li a:hover::after {
+  width: 100%;
+  left: 0;
+
 }
 
 .content {
@@ -104,7 +123,7 @@ header ul li a {
 .thumb {
   position: absolute;
   left: 50%;
-  bottom: 20px;
+  bottom: 100px;
   transform: translateX(-50%);
   display: flex;
   list-style: none;
@@ -123,8 +142,8 @@ header ul li a {
   max-width: 60px;
 }
 .thumb li:nth-of-type(4) img {
-  width: 60px;
-  height: 87px;
+  max-width: 80px;
+  height: 90px;
 }
 
 .sci {
@@ -146,14 +165,287 @@ header ul li a {
   filter: invert(1);
 }
 
-.circle{
-    position: absolute;
+.circle {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #017143;
+  clip-path: circle(600px at right 800px);
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 980px) {
+  header {
+    padding: 20px;
+  }
+  header .logo {
+    max-width: 60px;
+  }
+  header ul {
+    display: none;
+  }
+  .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 10;
+    background: url(https://cdn-icons-png.flaticon.com/512/2976/2976215.png)
+      center center / 30px no-repeat;
+  }
+  .toggle.active {
+    background: url(https://cdn-icons-png.flaticon.com/512/565/565313.png?w=740&t=st=1672168394~exp=1672168994~hmac=36842d2bfd34d7f97bf61d9b7ce3d7c9d312751e388b2d0147fb55ca74be45bb0)
+      center center / 30px no-repeat;
+    position: fixed;
+    right: 20px;
+  }
+  header ul.navigation.active {
+    position: fixed;
+    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    z-index: 9;
+    row-gap: 30px;
+  }
+  header ul li a{
+    font-size: 1.5em;
+  }
+  section {
+    padding: 20px 20px 120px;
+  }
+  .content {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  .content .textBox h2 {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+  }
+  .content .textBox {
+    max-width: 100%;
+  }
+  .content .imgBox {
+    max-width: 100%;
+    justify-content: center;
+  }
+  .content .imgBox img {
+    max-width: 250px;
+  }
+  .thumb {
+    bottom: 20px;
+  }
+  .thumb li img {
+    max-width: 40px;
+  }
+  .thumb li:nth-of-type(4) img {
+    max-width: 50px;
+    height: 68px;
+  }
+  .circle {
+    clip-path: circle(400px at center bottom);
+  }
+  .sci {
     background-color: #017143;
-    clip-path: circle(600px at right 800px);
-    transition: 0.5s;
+    right: 0;
+    width: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
 }
 
+.hero {
+  height: auto;
+  background: url("https://images.unsplash.com/photo-1565461133566-e35e9e120d5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+    left bottom no-repeat;
+  background-color: rgba(0, 0, 0, 0.747);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  color: rgb(255, 255, 255);
+  padding: 30px 80px 30px 30px;
+}
+.hero .container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.flex {
+  display: flex;
+}
+.container__about {
+  margin-bottom: 30px;
+}
+
+.container__about p {
+  margin-top: 10px;
+  max-width: 300px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.container-pages {
+  column-gap: 30px;
+}
+
+.container-pages ul {
+  padding-top: 10px;
+  list-style: none;
+  line-height: 24px;
+}
+.container-pages ul a {
+  color: inherit;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+.container-pages ul a:hover {
+  color: #017143;
+}
+footer .by {
+  margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .by p {
+  color: rgba(255, 255, 255, 0.605);
+  font-size: 14px;
+}
+.line__separete {
+  margin-top: 30px;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  z-index: 999;
+}
+.icons {
+  margin-top: 20px;
+  display: flex;
+  column-gap: 25px;
+}
+
+.icon1 {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 50%;
+  outline: 2px solid #fff;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
+}
+
+.icon1:hover {
+  outline-offset: 4px;
+}
+
+.icon1:hover i {
+  animation: shake 0.25s;
+}
+
+.icon--instagram:hover {
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  outline-color: #a02d76;
+}
+
+.icon--twitter:hover {
+  background-color: #1da1f2;
+  outline-color: #1da1f2;
+}
+
+.icon--linkedin:hover {
+  background-color: #0077b5;
+  outline-color: #0077b5;
+}
+
+.icon--github:hover {
+  background-color: #000000;
+  outline-color: #000000;
+}
+
+@keyframes shake {
+  10% {
+    transform: rotate(15deg);
+  }
+
+  20% {
+    transform: rotate(-15deg);
+  }
+
+  30% {
+    transform: rotate(15deg);
+  }
+
+  40% {
+    transform: rotate(-15deg);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hero {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container__about h2 {
+    font-size: 20px;
+  }
+  .container__about p {
+    font-size: 12px;
+  }
+  .container__recentpages h2 {
+    font-size: 20px;
+  }
+  .container-pages ul a {
+    font-size: 12px;
+  }
+  footer .by p {
+    font-size: 12px;
+  }
+}
+/* animations */
+.text-focus-in {
+	animation: text-focus-in 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2022-12-27 16:16:50
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+ @keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
