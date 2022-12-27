@@ -136,7 +136,7 @@ header ul li a:hover::after {
 .thumb {
   position: absolute;
   left: 50%;
-  bottom: 100px;
+  bottom: 30px;
   transform: translateX(-50%);
   display: flex;
   list-style: none;
@@ -419,6 +419,7 @@ footer .by p {
     padding: 10px;
     display: flex;
     flex-direction: column;
+    background-position: center right;
   }
 
   .container__about h2 {
