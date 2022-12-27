@@ -271,6 +271,7 @@ header ul li a:hover::after {
     width: 50px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    top: 70%;
   }
 }
 
